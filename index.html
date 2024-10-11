@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./3ef98af7-b84c-4703-8b4a-200bb95fc49b.jpeg"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="body">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <h2 class="text-center mt-3">Product Management System</h2>
+        <div class="col-lg-5 col-md-12 mx-auto py-3">
+          <div class="form-group py-1">
+            <label for="productName" class="mb-2 fw-medium fs-5"
+              >Product Name</label
+            >
+            <input
+              type="text"
+              id="productName"
+              class="form-control"
+              placeholder="Enter product name..."
+            />
+          </div>
+          <div class="form-group py-1">
+            <label for="productPrice" class="mb-2 fw-medium fs-5"
+              >Product Price</label
+            >
+            <input
+              type="number"
+              id="productPrice"
+              class="form-control"
+              placeholder="Enter product price..."
+            />
+          </div>
+          <div class="form-group py-1">
+            <label for="productCategory" class="mb-2 fw-medium fs-5"
+              >Product Category</label
+            >
+            <input
+              type="text"
+              id="productCategory"
+              class="form-control"
+              placeholder="Enter product category..."
+            />
+          </div>
+          <div class="form-group py-1">
+            <label for="productDesc" class="mb-2 fw-medium fs-5"
+              >Product Description</label
+            >
+            <textarea
+              name="productDesc"
+              id="productDesc"
+              class="form-control"
+              placeholder="Enter product description..."
+            ></textarea>
+          </div>
+          <button
+            id="addBtn"
+            onclick="addProduct()"
+            class="btn btn-outline-success fw-medium mt-2"
+          >
+            Add Product
+          </button>
+          <button
+            id="updateBtn"
+            onclick="updateTable()"
+            class="btn btn-outline-primary fw-medium mt-2 d-none"
+          >
+            Update Product
+          </button>
+        </div>
+
+        <div class="col-lg-6 col-md-12 mx-auto form-group my-4">
+          <label for="search" class="mb-2 fw-medium fs-5">Search</label>
+          <input
+            oninput="searchByName(this.value)"
+            id="search"
+            type="text"
+            class="form-control"
+          />
+          <table class="table mt-5 text-center fw-medium fs-6">
+            <thead>
+              <th>Index</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Description</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </thead>
+            <tbody id="tBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

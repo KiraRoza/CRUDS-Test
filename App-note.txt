@@ -1,0 +1,17 @@
+// NOTE - ==> Local Storage and Session Storage
+/*REVIEW - ==> The differance between them : local storage stores data until you remove it 
+                but session storage stores data when you open this tap.
+
+*/
+// localStorage.setItem();          // To add an item also I can use it to edit or update values.
+// localStorage.removeItem();       // To remove an item.
+// localStorage.getItem();          // To get an item.
+// localStorage.clear();            // To removes all key/value pairs.
+// localStorage.key();                 // To get the by his index.
+
+console.log(localStorage.key(2));
+console.log(
+  `My name is ${localStorage.getItem(
+    "userName"
+  )} and I am ${localStorage.getItem("userAge")} years old.`
+);
